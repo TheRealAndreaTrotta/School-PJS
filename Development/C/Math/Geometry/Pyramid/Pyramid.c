@@ -2,14 +2,33 @@
 
 #include <stdio.h>
 
-int main(void) {
-    int height;
+int corrin(void){ 
+    // This function ensures correct input 
+    int number; char character;
 
+    printf("Please, enter number: ");
+    
     do{
-        printf("Please, enter the height of the pyramid: ");
-        scanf("%d", &height);
-    }while(height<1);
+        if(number < 1){
+            printf("\tERROR: Not a valid input\n\nPlease, enter number: ");
+            while ((character = getchar()) != '\n' && character != EOF);        // Input buffer cleanup
 
+        } else if (scanf("%d", &number) != 1)  {
+            printf("\tERROR: Not a valid input\n\nPlease, enter number: ");
+            
+            while ((character = getchar()) != '\n' && character != EOF);        // Input buffer cleanup
+        } 
+
+    } while ((scanf("%d", &number) != 1) || (number < 1));
+
+    return number;
+}
+
+int main(void) {
+    int height = corrin();
+
+    printf("\n");
+    
     for(int i = 1; i <= height; i++){
         for(int space = 1; space <= height - i; space++){
             printf(" ");

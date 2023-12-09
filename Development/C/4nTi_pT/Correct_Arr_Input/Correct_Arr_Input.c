@@ -1,18 +1,22 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 int main(void) {
     int arr[3]; // Utilizzo di un array di dimensione 3 per memorizzare i tre numeri
     char character;
     
     for (int i = 0; i < 3; i++) {
-        printf("Please, enter a number: ");    
+        bool Valid = false; // Flag per indicare se l'input è valido
         
-        do {
+        while (!Valid) {
+            printf("Please, enter a number: ");    
             if (scanf("%d", &arr[i]) != 1 || arr[i] < 1) {
-                printf("\tERROR: Not a valid input\n\nPlease, enter a number: ");
+                printf("\tERROR: Not a valid input\n\n");
                 while ((character = getchar()) != '\n' && character != EOF); // Pulizia del buffer di input
-            } 
-        } while (arr[i] < 1);
+            } else {
+                Valid = true; // Imposta il flag a true se l'input è valido
+            }
+        }
     }
     
     printf("You entered: ");
