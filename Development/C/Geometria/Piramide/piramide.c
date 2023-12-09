@@ -5,8 +5,10 @@
 int main(void) {
     int height;
 
-    printf("Please, enter the height of the pyramid: ");
-    scanf("%d", &height);
+    do{
+        printf("Please, enter the height of the pyramid: ");
+        scanf("%d", &height);
+    }while(height<1);
 
     for(int i = 1; i <= height; i++){
         for(int space = 1; space <= height - i; space++){
