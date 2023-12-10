@@ -22,6 +22,10 @@ md Documenti,Programmi,Temp
         copy NUL .\giochi\Fortnite.exe | copy NUL .\giochi\Minecraft.exe
         copy NUL .\altro\Photshop.exe | copy NUL .\altro\VScode.exe | copy NUL .\altro\Unity.exe
 
+    cd ..
+
+    copy C:\Users\andre\OneDrive\Desktop\SoftDev\Development\Batch\Lorem.txt .\temp
+
 @echo off 
 echo Done!
 
