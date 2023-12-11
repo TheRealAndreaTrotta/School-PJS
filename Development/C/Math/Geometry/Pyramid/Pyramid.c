@@ -17,7 +17,9 @@ int corrin(void){
             printf("\tERROR: Not a valid input\n\nPlease, enter number: ");
             
             while ((character = getchar()) != '\n' && character != EOF);        // Input buffer cleanup
-        } 
+        } else {
+            break;
+        }
 
     } while ((scanf("%d", &number) != 1) || (number < 1));
 
@@ -33,7 +35,7 @@ int main(void) {
         for(int space = 1; space <= height - i; space++){
             printf(" ");
         }
-        for(int asterisk = 1; asterisk <= (2*i) - 1; asterisk++){
+        for(int asterisk = 1; asterisk <= (2*i)-1; asterisk++){
             printf("*");
         }
         printf("\n");

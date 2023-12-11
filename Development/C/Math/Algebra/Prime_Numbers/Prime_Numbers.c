@@ -14,11 +14,11 @@ int corrin(void){
     
     do{
         if(number < 1){
-            printf("\t+ ERROR: Not a valid input\n\nPlease, enter number: ");
+            printf("+\tERROR: Not a valid input\n+\n+ Please, enter number: ");
             while ((character = getchar()) != '\n' && character != EOF);        // Input buffer cleanup.
 
         } else if (scanf("%d", &number) != 1){                                  // !=1 (Is NaN).
-            printf("\t+ ERROR: Not a valid input\n\nPlease, enter number: ");
+            printf("+\tERROR: Not a valid input\n+\n+ Please, enter number: ");
             
             while ((character = getchar()) != '\n' && character != EOF);        
         } else{
