@@ -10,6 +10,7 @@ int main(void){
     for(int i=input; i!=0; i--){
         factorial *= i;
     }
+    
    
     printf("The factorial of %d result:\t%d\n\n",input, factorial);
 
