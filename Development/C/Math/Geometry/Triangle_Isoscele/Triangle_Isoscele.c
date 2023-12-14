@@ -5,7 +5,7 @@ int corrin(void){
     int number; char character;
 
     printf("Please, enter number: ");
-    scanf("%d", &number); 
+    
     do{
         if(number < 1){
             printf("\tERROR: Not a valid input\n\nPlease, enter number: ");
@@ -26,7 +26,8 @@ int corrin(void){
 
 int main(void) {
     int height = corrin();
-    printf("%d", height);
+
+    printf("\n");
     
     for(int i = 1; i <= height; i++){
         for(int j = 1; j <= (2*i) - 1; j++){
