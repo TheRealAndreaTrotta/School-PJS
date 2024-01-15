@@ -7,13 +7,14 @@
 #define MIN 1
 
 void welcome(void){
-    printf("+----------------------------------+\n");
-    printf("+              WELCOME             +\n");
-    printf("+----------------------------------+\n");
+    printf("+--------------------------------------------+\n");
+    printf("+                    WELCOME                 +\n");
+    printf("+--------------------------------------------+\n");
 }
 
 int main(void){
     srand(time(NULL));
+    welcome();
 
     int numbers[sz];
     int input;
@@ -24,21 +25,23 @@ int main(void){
         numbers[i] = rand()%(max-min+1)+min;
     }
 
-    printf("Please, enter a number: ");
+    printf("+ Please, enter a number: ");
     scanf("%d", &input);
 
     for(int i=0; i<sz; i++){
-        printf("%d, ", numbers[i]);
+        //printf("%d, ", numbers[i]);
         if(numbers[i] == input){
             counter ++;
         }
     }
 
     if(counter > 0){
-        printf("\nThe element is present in the array %d times\n", counter);
+        printf("\n+ The element is present in the array %d times\n", counter);
     }   else {
-            printf("The element is not present in the array\n");
+            printf("+ The element is not present in the array\n");
         }
 
+    printf("+--------------------------------------------+\n");
+    
     return 0;
 }
