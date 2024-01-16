@@ -1,0 +1,2 @@
+Contest switching -> cerca
+ricerca dicotomica o ricerca binaria o logaritmica
