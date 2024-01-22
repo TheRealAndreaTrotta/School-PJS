@@ -42,8 +42,10 @@ int main(void) {
 
     rand_arr(numbers);
     
-    printf("+\n+ Please, enter number: ");
-    scanf("%d", &input);
+    do{
+        printf("+\n+ Please, enter number: ");
+        scanf("%d", &input);
+    }while(input < MIN || input > MAX);
     
     printf("+\n");
 
