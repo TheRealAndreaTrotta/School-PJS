@@ -1,2 +1,16 @@
 Contest switching -> cerca
 ricerca dicotomica o ricerca binaria o logaritmica
+
+
+informatica:
+    char alphabet[50] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    strlen(alphabet) // 26
+    sizeof(alphabet) // 50
+
+
+    str1 = ciao
+    str2 = come stai?
+    strcat(str1, str2) --> str1 = ciao come stai?
+
+    printf("%d", strcmp(str1, str2); 
