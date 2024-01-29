@@ -5,11 +5,12 @@
 
 void welcome(void){
     printf("+----------------------------------------------------+\n");
-    printf("+                     ROT 13                         +\n");
+    printf("+                     WELCOME!                       +\n");
     printf("+----------------------------------------------------+\n");
 }
 
 int main(void){
+    welcome();
 
     char phrase[SZ];
     char vocal[] = "aeiouAEIOU";
@@ -29,7 +30,8 @@ int main(void){
         }
     }
 
-    printf("There are %d vocal in this word\n", counter);
+    printf("+ There are %d vocal in this word\n", counter);
+    printf("+----------------------------------------------------+\n");
 
     return 0;
 }
