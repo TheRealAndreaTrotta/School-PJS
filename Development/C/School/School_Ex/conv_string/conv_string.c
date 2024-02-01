@@ -19,6 +19,7 @@ int main(void){
 
     int lenght = strlen(string);
 
+    printf("+ ");
     for(int i=lenght; i>=0; i--){
         printf("%c", string[i]);
     }

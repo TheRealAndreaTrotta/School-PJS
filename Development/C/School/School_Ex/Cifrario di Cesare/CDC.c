@@ -24,7 +24,7 @@ int main(void){
     for(i=0; phrase[i] != '\0'; i++){
         cif_phrase[i] = phrase[i] + 13;
 
-        if((cif_phrase[i] > 'z') || (cif_phrase[i] > 'Z') && (cif_phrase[i] < 'a')){
+        if((cif_phrase[i] > 'z') && (cif_phrase[i] < 'a')) || (cif_phrase[i] > 'Z') && (cif_phrase[i] < 'A')){
             cif_phrase[i] = phrase[i] + 13 - 26;
         } 
     }
