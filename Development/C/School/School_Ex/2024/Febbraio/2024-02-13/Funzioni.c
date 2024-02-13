@@ -23,6 +23,7 @@ void Endl(void);
 double Circle_Area(double radius);
 double Circle_Cir(double radius);
 
+// PRINT FUNCTIONS
 void print(char string[], double variables);
 
 // PROGRAM
