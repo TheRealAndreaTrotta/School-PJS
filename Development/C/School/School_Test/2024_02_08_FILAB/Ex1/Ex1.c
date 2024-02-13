@@ -12,7 +12,7 @@ Considerare ovviamente gli elementi dal terzo in poi.
 #include <time.h>
 
 //MACROS
-#define SZ 10
+#define SZ 20
 #define MIN 1
 #define MAX 10
 

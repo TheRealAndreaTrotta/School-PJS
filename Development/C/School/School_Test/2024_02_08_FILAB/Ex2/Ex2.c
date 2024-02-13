@@ -24,7 +24,7 @@ int main(void){
 
     char string[SZ], word[SZ];
     char voweles[] = "aeiouAEIOU";
-    char character;
+    char character[2];
     
     int count = 0, count_voweles = 0, count_consonant = 0, count_character = 0;
 
@@ -44,12 +44,10 @@ int main(void){
     int lenght = strlen(word);
 
     for(int i=0; i<lenght; i++){
-        if((string[i] >= 'A') && (string[i] <= 'Z') || (string[i] >= 'a') && (string[i] <= 'z')){
-            for(int j=0; j<strlen(voweles); j++){
-                if(word[i] == voweles[j]){
+        for(int j=0; j<strlen(voweles); j++){
+            if(word[i] == voweles[j]){
                 count_voweles++;
             }
-        }
         }
     }
 
@@ -63,18 +61,18 @@ int main(void){
     scanf("%c", character);
 
     for(int n=0; n<strlen(string); n++){
-        if(string[n] == character){
+        if(string[n] == character[0]){
             count_character++;
         }
     }
 
     for(int m=0; m<strlen(word); m++){
-        if(word[m] == character){
+        if(word[m] == character[0]){
             count_character++;
         }
     }
 
-    printf("+ The character %c, was appear %d times in this program!", character, count_character);
+    printf("+ The character %c, was appear %d times in this program!", character[0], count_character);
     printf("\n+--------------------------------------------------------------------+\n");
 
     return 0;
