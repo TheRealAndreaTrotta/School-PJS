@@ -7,7 +7,7 @@ Inserire due date GG/MM/YYYY visualizzare i giorni che intercorrono tra una data
 
 // LIBRARY
 #include <stdio.h>
-#include <stdio.h>
+#include <stdlib.h>
 #include <stdbool.h>
 
 // GRAPHIC FUNCTIONS
@@ -25,27 +25,34 @@ int main(void){
     int month_days[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
     int day, month, year;
-    int flag = 0, data = 0;
-
-    int difference[1];
+    int flag = 0, data = 0, difference = 0, pivout[3];
 
     // Validatore
     for(int t=0; t<2; t++){
-        printf("Please write the date [DD/MM/YYYY]: ");
+        printf("+ Please write the date [DD/MM/YYYY]: ");
         scanf("%d %d %d", &day, &month, &year);
 
         flag = verify_date(day, month, year);
 
         if(flag == true){
             month = month_days[month];
+            if(t==1){
+                if(year == pivout[2]){
+                    difference += (day-pivout[0])+(month-pivout[1])+(year-pivout[2]);
+                }
+            }
+            
+            pivout[0] = day, pivout[1] = month, pivout[2] = year; 
         }
+
         else{
             puts("+\tERROR: It looks like your dates is invalid");
             t--;
         }
     }
 
-    
+    printf("+ %d days\n", abs(difference));
+
     endl();
     return 0;
 }
