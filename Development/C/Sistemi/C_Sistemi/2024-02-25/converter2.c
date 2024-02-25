@@ -93,7 +93,7 @@ int main(void){
         }while(input < 0);
     }
 
-    switch(choice) {
+    switch(choice){
         case 1:
         printf("+ Result: %c\n", dec2char(input));
         break;
@@ -110,7 +110,7 @@ int main(void){
         printf("+ Exit ");
         loading(); puts("");
         break;
-
+        //
     }
 
     endl();
@@ -191,5 +191,3 @@ void dec2hex(int number) {
         printf("%c", hex[j]);
     }
 }
-
-
