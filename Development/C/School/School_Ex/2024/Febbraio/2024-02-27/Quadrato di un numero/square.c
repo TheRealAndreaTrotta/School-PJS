@@ -10,6 +10,7 @@ trovata, nel secondo caso restituisce -1.
 
 // LIBRARY
 #include <stdio.h>
+#include <math.h>
 
 // GRAPHIC FUNCTIONS
 void welcome(void);
@@ -22,6 +23,14 @@ void endl(void);
 int main(void){
     welcome();
 
+    int input;
+
+    do{
+        printf("Please, enter a number: ");
+        scanf("%d", &input);
+    }(while input < 0);
+
+    if(sqrt(input))
     endl();
     return 0;
 }
