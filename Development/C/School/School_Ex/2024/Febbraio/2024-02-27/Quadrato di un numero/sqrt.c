@@ -10,13 +10,15 @@ trovata, nel secondo caso restituisce -1.
 
 // LIBRARY
 #include <stdio.h>
+#include <stdbool.h>
 #include <math.h>
 
 // GRAPHIC FUNCTIONS
 void welcome(void);
 void endl(void);
 
-// FUNCTIONS
+// MATH FUNCTIONS
+int square(int input);
 
 
 // PROGRAM
@@ -26,11 +28,19 @@ int main(void){
     int input;
 
     do{
-        printf("Please, enter a number: ");
+        printf("+ Please, enter a number: ");
         scanf("%d", &input);
-    }(while input < 0);
+    }while(input < 0);
 
-    if(sqrt(input))
+    int result = square(input);
+
+    if(result == false){
+        printf("+ Square: NOT FOUND\n");
+    }
+    else{
+        printf("+ Square: %d\n", result);
+    }
+
     endl();
     return 0;
 }
@@ -43,4 +53,15 @@ void welcome(void){
 
 void endl(void){
     puts("+--------------------------------------------------------------------+");
+}
+
+int square(int input){
+    int divisor = input/2;
+
+    for(int i=1; i<=divisor; i++){
+        if(pow(i, 2)==input){
+            return i;
+        }
+    }
+    return -1;
 }
