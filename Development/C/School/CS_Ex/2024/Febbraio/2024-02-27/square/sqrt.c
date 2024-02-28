@@ -18,7 +18,6 @@ void endl(void);
 // MATH FUNCTIONS
 int square(int input);
 
-
 // PROGRAM
 int main(void){
     welcome();
