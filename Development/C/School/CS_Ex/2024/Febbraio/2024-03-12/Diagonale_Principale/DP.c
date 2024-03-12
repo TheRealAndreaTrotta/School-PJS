@@ -1,12 +1,40 @@
+// LIBRARY
 #include <stdio.h>
 
+// MACROS
 #define rows 5
 #define column 5
 
-int main(void){
-    int matrix[rows][column];
+// GRAPHIC FUNCTIONS
+void welcome(void);
+void endl(void);
 
+// FUNCTION
+void fill_diagonal(int matrix[rows][column]);
+
+int main(void){
+    welcome();
+
+    int matrix[rows][column];
+    fill_diagonal(matrix);
+
+    endl();
+    return 0;
+}
+
+void welcome(void){
+    puts("+--------------------------------------------------------------------+");
+    puts("+                             WELCOME!                               +");
+    puts("+--------------------------------------------------------------------+");
+}
+
+void endl(void){
+    puts("+--------------------------------------------------------------------+");
+}
+
+void fill_diagonal(int matrix[rows][column]){
     for(int i=0; i<column; i++){
+        printf("+ ");
         for(int j=0; j<rows; j++){
             if(j==i){
                 matrix[i][j] = 1;
@@ -18,5 +46,4 @@ int main(void){
         }
         puts("");
     }
-    return 0;
 }
