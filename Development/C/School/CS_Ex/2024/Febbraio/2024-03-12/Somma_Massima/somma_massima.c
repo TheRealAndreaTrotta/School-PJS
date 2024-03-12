@@ -1,30 +1,40 @@
 /*------------------------------------------------------------------------------------------------------------
 CONSEGNA
 --------------------------------------------------------------------------------------------------------------
-Memorizzare in un array bidimensionale N x N tutti zeri tranne nelle celle della diagonale principale dove 
-memorizzare uno
+Data una matrice 4×4 di interi generati casualmente trovare la riga o la colonna con somma più alta.
+Stampare di che riga o colonna si tratta e qual è il valore.
 ------------------------------------------------------------------------------------------------------------*/
 
 // LIBRARY
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 // MACROS
-#define rows 5
-#define column 5
+#define rows 4
+#define columns 4
+
+#define MAX 9
+#define MIN 1
 
 // GRAPHIC FUNCTIONS
 void welcome(void);
 void endl(void);
 
 // FUNCTION
-void fill_diagonal(int matrix[rows][column]);
+void random_matx(int matrix[rows][columns]);
+void checksum_matx(int matrix[rows][columns]);
 
 int main(void){
+    srand(time(NULL));
     welcome();
 
-    int matrix[rows][column];
-    fill_diagonal(matrix);
+    int matrix[rows][columns];
 
+    random_matx(matrix);
+    puts("");
+
+    checksum_matx(matrix);
     endl();
     return 0;
 }
@@ -39,18 +49,35 @@ void endl(void){
     puts("+--------------------------------------------------------------------+");
 }
 
-void fill_diagonal(int matrix[rows][column]){
-    for(int i=0; i<column; i++){
+void random_matx(int matrix[rows][columns]){
+    for (int i = 0; i < rows; i++){
         printf("+ ");
-        for(int j=0; j<rows; j++){
-            if(j==i){
-                matrix[i][j] = 1;
-            }
-            else{
-                matrix[i][j] = 0;
-            }
+        for (int j = 0; j < columns; j++){
+            matrix[i][j] = rand() % (MAX - MIN + 1) + MIN;
             printf("%d  ", matrix[i][j]);
         }
+        printf("\n");
+    }
+}
+
+void checksum_matx(int matrix[rows][columns]){
+    int sum = 0, sum_col = 0;
+    int i = 0, j = 0;
+
+    for (i = 0; i < rows; i++){
+        printf("+ ");
+
+        for (j = 0; j < columns; j++){
+            sum += matrix[i][j];
+            printf("%d  ", matrix[i][j]);
+
+            if(j==columns-1){
+                matrix[rows][columns] = sum;
+                printf("s%d  ", matrix[rows][columns]);
+            }
+        }
+
+        sum = 0;
         puts("");
     }
 }
