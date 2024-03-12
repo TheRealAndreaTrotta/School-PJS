@@ -61,7 +61,7 @@ void random_matx(int matrix[rows][columns]){
 }
 
 void checksum_matx(int matrix[rows][columns]){
-    int sum = 0, sum_col = 0;
+    int sum = 0, greater = 0;
     int i = 0, j = 0;
 
     for (i = 0; i < rows; i++){
@@ -72,12 +72,18 @@ void checksum_matx(int matrix[rows][columns]){
             printf("%d  ", matrix[i][j]);
 
             if(j==columns-1){
+                if(greater < sum){
+                    greater = sum;
+                }
+
                 matrix[rows][columns] = sum;
                 printf("s%d  ", matrix[rows][columns]);
             }
         }
-
+        greater == sum;
         sum = 0;
+        
         puts("");
     }
+    printf("GR: %d\n", greater);
 }
