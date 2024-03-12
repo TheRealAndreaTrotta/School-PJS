@@ -82,8 +82,8 @@ void checksum_matx(int matrix[rows][columns]){
         }
         greater == sum;
         sum = 0;
-        
+
         puts("");
     }
-    printf("GR: %d\n", greater);
+    printf("+ GR: %d\n", greater);
 }
