@@ -24,7 +24,6 @@ void endl(void);
 // FUNCTION
 void random_matx(int matrix[][columns]);
 void checksum_matx(int matrix[][columns]);
-void col_checksum(int matrix[][columns]);
 
 int main(void){
     srand(time(NULL));
@@ -46,7 +45,7 @@ void welcome(void){
 }
 
 void endl(void){
-    puts("+--------------------------------------------------------------------+");
+    puts("\n+--------------------------------------------------------------------+");
 }
 
 void random_matx(int matrix[][columns]){
@@ -61,40 +60,48 @@ void random_matx(int matrix[][columns]){
 }
 
 void checksum_matx(int matrix[][columns]){
-    int sum = 0, greater = 0;
-    int i = 0, j = 0;
+    int sum;
+    int row_position = 0, col_position = 0;
+    int greatest_sum_row = 0, greatest_sum_col = 0;
 
-    for (i = 0; i < rows; i++){
+    for (int i = 0; i < rows; i++){
+        sum = 0;
         printf("+ ");
 
-        for (j = 0; j < columns; j++){
+        for (int j = 0; j < columns; j++){
             sum += matrix[i][j];
-            printf("%d  ", matrix[i][j]);
-
-            if(j==columns-1){
-                if(greater < sum){
-                    greater = sum;
-                }
-
-                matrix[rows][columns] = sum;
-                printf("s%d  ", matrix[rows][columns]);
-            }
+            printf("0%d  ", matrix[i][j]);
         }
-        greater == sum;
+
+        printf("%d\n", sum);
+
+        if (greatest_sum_row < sum){
+            greatest_sum_row = sum;
+            row_position = i+1;
+        }
+    }
+
+    printf("+ ");
+
+    for (int j = 0; j < columns; j++) {
         sum = 0;
-
-        puts("");
-    }
-    printf("+ GR: %d\n", greater);
-}
-
-void col_checksum(int matrix[][columns]){
-    int sum = 0;
-    int i = 0; j = 0;
-
-    for(i=0; i<rows; i++){
-        for(j=0; j<columns-i; j++){
+        
+        for (int i = 0; i < rows; i++) {
             sum += matrix[i][j];
         }
+
+        printf("%d  ", sum);
+
+        if (greatest_sum_col < sum) {
+            greatest_sum_col = sum;
+            col_position = j+1;
+        }
     }
+
+    if(greatest_sum_col < greatest_sum_row){
+        printf("\n+ \n+ The greatest sum equal: %d | \033[1;31m row position: %d\033[0m", greatest_sum_row, row_position);
+    }
+    else{
+        printf("\n+ \n+ The greatest sum equal: %d | \033[1;31m column position: %d\033[0m", greatest_sum_col, col_position);
+    }    
 }
