@@ -105,3 +105,25 @@ void checksum_matx(int matrix[][columns]){
         printf("\n+ \n+ The greatest sum equal: %d | \033[1;31m column position: %d\033[0m", greatest_sum_col, col_position);
     }    
 }
+
+/*--------------------------------------------------------------------------------------------------------------
+MAN (Ita Lang.)
+----------------------------------------------------------------------------------------------------------------
+Come funziona?
+    - random_matx: Questa funzione è responsabile della generazione casuale della matrice 4x4 di interi. 
+      Utilizza la funzione rand() della libreria `stdlib.h` per generare numeri casuali e imposta i limiti 
+      inferiore e superiore tramite le costanti `MIN` e `MAX`. La matrice viene riempita con numeri casuali 
+      compresi tra questi limiti.
+
+    - checksum_matx: Questa funzione calcola le somme delle righe e delle colonne della matrice e determina 
+      quale riga o colonna ha la somma più alta. Per calcolare le somme delle righe, scorre ogni riga della matrice 
+      e somma i suoi elementi. 
+    
+      La somma di ogni riga viene stampata insieme alla riga stessa. Durante questo processo, 
+      tiene traccia della somma massima e della sua posizione. Successivamente, calcola le somme delle colonne e stampa 
+      queste somme accanto alla matrice. Anche qui tiene traccia della somma massima e della sua posizione. 
+
+      Alla fine, confronta le somme massime delle righe e delle colonne per determinare se la somma massima 
+      appartiene a una riga o a una colonna e stampa il risultato insieme alla posizione corrispondente. 
+      La stampa finale avviene con una formattazione leggibile.
+--------------------------------------------------------------------------------------------------------------*/
