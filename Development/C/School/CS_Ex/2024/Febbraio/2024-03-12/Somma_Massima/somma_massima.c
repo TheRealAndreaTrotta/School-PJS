@@ -24,6 +24,7 @@ void endl(void);
 // FUNCTION
 void random_matx(int matrix[][columns]);
 void checksum_matx(int matrix[][columns]);
+void col_checksum(int matrix[][columns]);
 
 int main(void){
     srand(time(NULL));
@@ -85,4 +86,15 @@ void checksum_matx(int matrix[][columns]){
         puts("");
     }
     printf("+ GR: %d\n", greater);
+}
+
+void col_checksum(int matrix[][columns]){
+    int sum = 0;
+    int i = 0; j = 0;
+
+    for(i=0; i<rows; i++){
+        for(j=0; j<columns-i; j++){
+            sum += matrix[i][j];
+        }
+    }
 }
