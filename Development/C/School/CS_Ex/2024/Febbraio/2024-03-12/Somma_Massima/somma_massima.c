@@ -22,8 +22,8 @@ void welcome(void);
 void endl(void);
 
 // FUNCTION
-void random_matx(int matrix[rows][columns]);
-void checksum_matx(int matrix[rows][columns]);
+void random_matx(int matrix[][columns]);
+void checksum_matx(int matrix[][columns]);
 
 int main(void){
     srand(time(NULL));
@@ -32,9 +32,8 @@ int main(void){
     int matrix[rows][columns];
 
     random_matx(matrix);
-    puts("");
-
     checksum_matx(matrix);
+
     endl();
     return 0;
 }
@@ -49,18 +48,18 @@ void endl(void){
     puts("+--------------------------------------------------------------------+");
 }
 
-void random_matx(int matrix[rows][columns]){
+void random_matx(int matrix[][columns]){
     for (int i = 0; i < rows; i++){
-        printf("+ ");
+        //printf("+ ");
         for (int j = 0; j < columns; j++){
             matrix[i][j] = rand() % (MAX - MIN + 1) + MIN;
-            printf("%d  ", matrix[i][j]);
+            //printf("%d  ", matrix[i][j]);
         }
-        printf("\n");
+        //printf("\n");
     }
 }
 
-void checksum_matx(int matrix[rows][columns]){
+void checksum_matx(int matrix[][columns]){
     int sum = 0, greater = 0;
     int i = 0, j = 0;
 

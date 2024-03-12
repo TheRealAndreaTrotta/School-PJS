@@ -17,7 +17,7 @@ void welcome(void);
 void endl(void);
 
 // FUNCTION
-void fill_diagonal(int matrix[rows][column]);
+void fill_diagonal(int matrix[][column]);
 
 int main(void){
     welcome();
@@ -39,7 +39,7 @@ void endl(void){
     puts("+--------------------------------------------------------------------+");
 }
 
-void fill_diagonal(int matrix[rows][column]){
+void fill_diagonal(int matrix[][column]){
     for(int i=0; i<column; i++){
         printf("+ ");
         for(int j=0; j<rows; j++){
