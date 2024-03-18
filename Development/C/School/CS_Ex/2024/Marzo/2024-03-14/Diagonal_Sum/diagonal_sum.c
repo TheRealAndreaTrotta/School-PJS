@@ -70,6 +70,8 @@ int fill_diagonal(int matrix[][column]){
         puts("");
     }
 
+    for(i=0; i<column; i++){}
+
     printf("+ First sum: %d\n", sum);
     printf("+ Second sum: %d\n", sum_2);
 
