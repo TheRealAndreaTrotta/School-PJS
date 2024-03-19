@@ -17,8 +17,8 @@ più severo.
 #include <time.h>
 
 // MACROS
-#define ROWS 3
-#define COLUMN 3
+#define ROWS 3 // Judge
+#define COLUMN 3 // Student
 
 #define MIN 0
 #define MAX 5
@@ -37,7 +37,6 @@ int main(void){
 }
 
 void marks(int matrix[][COLUMN]){
-    int sum = 0, pivout = 0, sever = 0;
     for(int i=0; i<ROWS; i++){
         for(int j=0; j<COLUMN; j++){
             matrix[i][j] = rand() % (MAX - MIN + 1) - MIN; 
