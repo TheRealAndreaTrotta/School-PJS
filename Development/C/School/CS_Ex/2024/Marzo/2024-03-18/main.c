@@ -27,9 +27,10 @@ e visualizzi la corrispondente cifra di controllo calcolata con il metodo descri
 // MACROS
 #define SZ 13
 #define MIN 1
-#define MAX 100
+#define MAX 9
 
 // FUNCTIONS
+void print_array(int array[]);
 void fill_array(int array[]);
 void check(int array[]);
 
@@ -40,29 +41,35 @@ int main(void){
     int barcode[SZ];
 
     fill_array(barcode);
-    puts("");
     check(barcode);
 
+    printf("BARCODE: ");
+    print_array(barcode);
 
     return 0;
+}
+
+void print_array(int array[]){
+    for(int i=0; i<=SZ; i++){
+        printf("%d", array[i]);
+    }
 }
 
 void fill_array(int array[]){
     for(int i=0; i<SZ; i++){
         array[i] = rand() % (MAX - MIN + 1) + MIN;
-        printf("%d, ", array[i]);
+        //printf("%d, ", array[i]);
     }
 }
 
 void check(int array[]){
-    int sum = 0;
+    int sum = 0, i;
 
-    for(int i=0; i<SZ; i++){
-        if(array[i]%2!=0){
+    for(i=0; i<SZ; i++){
+        if(i%2!=0){
             array[i] *= 3;
         }
         sum += array[i];
     }
-    sum = sum % 10;
-    printf("SUM: %d", sum);
+    array[i] = sum % 10;
 }
