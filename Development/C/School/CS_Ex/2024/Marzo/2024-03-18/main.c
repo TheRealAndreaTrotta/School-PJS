@@ -60,6 +60,7 @@ void fill_array(int array[]){
         array[i] = rand() % (MAX - MIN + 1) + MIN;
         //printf("%d, ", array[i]);
     }
+    //puts("");
 }
 
 void check(int array[]){
@@ -70,6 +71,7 @@ void check(int array[]){
             array[i] *= 3;
         }
         sum += array[i];
+        //printf("%d, ", array[i]);
     }
     array[i] = sum % 10;
 }
