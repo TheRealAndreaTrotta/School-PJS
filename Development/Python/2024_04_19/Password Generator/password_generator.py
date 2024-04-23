@@ -45,6 +45,7 @@ def main():
         password += character
 
     print(f"+ Your password has been generated: {password}")
+    #print("+ Your password is:", ''.join(unified_list)) 
     endl()
 
 main()
