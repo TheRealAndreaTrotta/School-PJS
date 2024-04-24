@@ -1,0 +1,62 @@
+<html>
+    <link rel="stylesheet" href="./css/style.css">
+    <head>
+        <title>Form | Home</title>
+    </head>
+    <body style="background-color: lightblue;">
+        <h1>EMPLOYEE DATA ENTRY</h1>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Surname</td>
+                    <td><input type="text" name="surname"></td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" name="name"></td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td><input type="number" name="age"></td>
+                </tr>
+                <tr>
+                    <td>Hired on</td>
+                    <td><input type="date" name="hired_date"></td>
+                </tr>
+                <tr>
+                    <td>Country of Origin</td>
+                    <td><input type="radio" id="italy" name="country" value="italy">
+                    <label for="italy">Italy</label>
+                    <input type="radio" id="EU" name="country" value="EU">
+                    <label for="EU">EU</label>
+                    <input type="radio" id="other" name="country" value="other">
+                    <label for="other">Other</label></td>
+                </tr>
+                <tr>
+                    <td>Programming Languages</td>
+                    <td><input type="radio" id="C" name="language" value="C">
+                    <label for="C">C</label>
+                    <input type="radio" id="C++" name="language" value="C++">
+                    <label for="C++">C++</label>
+                    <input type="radio" id="java" name="language" value="java">
+                    <label for="java">Java/Javascript</label>
+                    <input type="radio" id="delphi" name="language" value="delphi">
+                    <label for="delphi">Delphi</label></td>
+                </tr>
+                <tr>
+                    <td>Qualification</td>
+                    <td><select name="qualification">
+                        <option value="option1">Programmer</option>
+                        <option value="option2">Graphic Designer</option>
+                        <option value="option3">Electrical Technician</option>
+                        <option value="option4">Pizza Chef</option>
+                        <option value="option5">Freeloader</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="CONFIRM DATA"></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
