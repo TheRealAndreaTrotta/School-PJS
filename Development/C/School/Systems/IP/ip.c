@@ -12,7 +12,7 @@ int main(void) {
 
     int difference = ip_1 - ip_0 + 1;   // Aggiungo uno per includere l'indirizzo in se
 
-    printf("The differenze between IP::192.168.1.1 and IP::192.168.1.5 is %d\n", difference);
+    printf("\nThe differenze between IP::192.168.1.1 and IP::192.168.1.5 is %d\n", difference);
 
     return 0;
 }
