@@ -1,0 +1,32 @@
+.boxetto {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+h2 {
+    text-align: center;
+}
+form {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+input, select, textarea {
+    width: calc(100% - 16px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type="submit"] {
+    background-color: #aa0707;
+    color: white;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #890505;
+}

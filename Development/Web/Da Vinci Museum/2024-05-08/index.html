@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>Reservation Form</title>
+</head>
+
+<body>
+
+<div class="boxetto">
+    <h2>Reservation Form</h2>
+
+    <div class="boxetto">
+        <form action="submit.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" required>
+
+            <label for="mail">Email:</label>
+            <input type="email" id="mail" name="mail" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10,}" required>
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+        </form>
+    </div>
+
+    <div class="boxetto">
+        <form action="submit.php" method="post">
+            <label for="ticket_type">Ticket Type:</label>
+            <select id="ticket_type" name="ticket_type" required>
+                <option value="">Select...</option>
+                <option value="Standard">Standard</option>
+                <option value="VIP">VIP</option>
+            </select>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+        </form>
+    </div>
+
+    <div class="boxetto">
+        <form action="submit.php" method="post">
+            <label>Other Options:</label>
+            <input type="checkbox" id="audioguide" name="audioguide" value="17.00">
+            <label for="audioguide">Audio Guide (+$17.00)</label><br>
+            
+            <input type="checkbox" id="wardrobe" name="wardrobe" value="12.00">
+            <label for="wardrobe">Wardrobe (+$12.00)</label><br>
+            
+            <input type="checkbox" id="documentary" name="documentary" value="17.00">
+            <label for="documentary">Documentary Viewing (+$17.00)</label><br>
+        </form>
+    </div>
+
+    <div class="boxetto">
+        <form action="submit.php" method="post">
+            <label for="comment">Comment:</label>
+            <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
