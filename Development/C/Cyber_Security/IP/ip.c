@@ -16,3 +16,5 @@ int main(void) {
 
     return 0;
 }
+
+// da migliorare, questo programma determinal solo la distanza tra questi due IP non di tutti quelli proponibili
