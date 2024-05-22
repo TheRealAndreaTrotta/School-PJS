@@ -1,4 +1,3 @@
-// date due matrici, l'utente sceglie quali righe scambiare delle due
 #include <stdio.h>
 #include "mylib.c"
 
@@ -37,3 +36,5 @@ int main(void){
     
     return 0;
 }
+
+// date due matrici, l'utente sceglie quali righe scambiare delle due
