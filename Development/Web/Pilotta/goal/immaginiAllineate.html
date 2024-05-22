@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox con immagini e testo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .box img {
+            width: 200px;
+            height: 200px;
+            /*border-radius: 50%;*/
+            margin-bottom: 10px;
+        }
+
+        .box p {
+            margin: 0;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="box">
+        <img src="img1.jpg" alt="Immagine 1">
+        <p>Testo per la prima immagine</p>
+    </div>
+    <div class="box">
+        <img src="img2.jpg" alt="Immagine 2">
+        <p>Testo per la seconda immagine</p>
+    </div>
+    <div class="box">
+        <img src="img3.jpg" alt="Immagine 3">
+        <p>Testo per la terza immagine</p>
+    </div>
+</div>
+
+</body>
+</html>
