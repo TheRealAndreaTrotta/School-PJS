@@ -44,11 +44,9 @@ h3 {
 }
 
 .header {
-    position: fixed;
+    position: centre;
     top: 0;
-    left: 0; /* Allinea il header con il bordo sinistro del container */
-    right: 0; /* Allinea il header con il bordo destro del container */
-    padding: 3rem 2rem; /* Applica lo stesso padding laterale del container */
+    padding: 3rem 2rem; 
     background: rgb(134, 135, 119);
     backdrop-filter: blur(10px);
     display: flex;
@@ -57,13 +55,17 @@ h3 {
     z-index: 100;
 }
 
-
 .header img {
     margin-right: auto;
 }
 
+.main-image img {
+    width: 116rem;
+    height: auto;
+}
+
 .navbar {
-    background-color: rgb(93, 15, 49);
+    background-color: var(--main-color);
     padding-top: 2rem;
     padding-bottom: 2rem;
     display: flex;
@@ -73,7 +75,7 @@ h3 {
 
 .navbar a {
     font-size: 1.8rem;
-    color: white;
+    color: var(--text-color);
     margin-left: 4rem;
     font-weight: 500;
     transition: 0.3s ease-in-out;
@@ -101,7 +103,7 @@ h3 {
 }
 
 .photo-box img {
-    max-width: 45%; 
+    max-width: 45%;
     height: auto;
     border: 0.5rem solid red;
     border-radius: 8px; 
@@ -109,24 +111,49 @@ h3 {
 }
 
 .container {
+    background-color: rgb(213, 214, 194);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
 }
 
 .box {
+    display: flex;
+    align-items: flex-start;
     margin: 20px;
-    text-align: center;
+    text-align: left;
 }
 
 .box img {
-    width: 200px;
-    height: 200px;
-    /*border-radius: 50%;*/
+    width: 15rem;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.box .text {
+    max-width: calc(100% - 15rem - 20px); /* Assicura che il testo non superi il contenitore */
+}
+
+.box h2 {
+    color: black;
     margin-bottom: 10px;
 }
 
 .box p {
-    margin: 0;
-    font-size: 18px;
+    text-align: left;
+    font-size: 11px;
+}
+
+footer {
+    margin-top: 2rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--main-color);
+}
+
+footer p {
+    color: var(--text-color);
 }
