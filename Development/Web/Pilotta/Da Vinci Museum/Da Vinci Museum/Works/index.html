@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works | Leonardo Da Vinci</title>
+    <link rel="icon" href="src/img/icon.png">
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body>
+    <main>
+        <div class="header">
+            <div class="header-start">
+                <span class="header-title">Leonardo Da Vinci</span>
+            </div>
+            <div class="header-end">
+                <img src="../src/img/logo.jpg" alt="" class="header-logo">
+            </div>
+        </div>
+        
+        <div class="box-container">
+            <div class="box-nav">
+                <a href="../index.html" class="nav-link" >Home</a>
+                <a href="../Biography/index.html" class="nav-link" >Biography</a>
+                <a href="../Works/index.html" class="nav-link selected" >Works</a>
+                <a href="#" class="nav-link">Book Museum</a>
+            </div>
+            
+            <div class="box-content" id="opere">
+                    <span class="page-title">Works</span>
+                    
+                    <div class="table">
+
+                        <div class="table-row">
+                            <div class="table-image" onclick="viewImage(this)" style="background-image: url(../src/img/opera_1.jpg);"></div>
+                            <div class="table-title">
+                                <span>Mona Lisa</span>
+                            </div>
+                            <div class="table-description">
+                                <span>
+                                    The Mona Lisa is a famous painting by Leonardo da Vinci, known for the enigmatic gaze and mysterious smile of the depicted woman. Created between 1503 and 1506, the painting is admired for its beauty and Leonardo's use of sfumato technique.
+                                </span>
+                                </div>
+                        </div>
+
+                        <div class="table-row">
+                            <div class="table-image" onclick="viewImage(this)" style="background-image: url(../src/img/opera_2.jpg);"></div>
+                            <div class="table-title">
+                                <span>The Last Supper</span>
+                            </div>
+                            <div class="table-description">
+                                <span>
+                                    A mural painting by Leonardo da Vinci depicting the last supper of Jesus with his apostles. Completed around 1498. The painting is famous for its dramatic representation and Leonardo's ability to capture human emotions.
+                                </span>
+                                </div>
+                        </div>
+
+                        <div class="table-row">
+                            <div class="table-image" onclick="viewImage(this)" style="background-image: url(../src/img/opera_3.jpg);"></div>
+                            <div class="table-title">
+                                <span>The Flying Machine</span>
+                            </div>
+                            <div class="table-description">
+                                <span>
+                                    Leonardo da Vinci's flying machine is an iconic engineering work designed to mimic the flight of birds. It includes a lightweight frame with movable wings, inspired by the wing structure of birds.
+                                </span>
+                                </div>
+                        </div>
+
+                        
+                    </div>
+            </div>
+            
+        </div>
+
+        <div class="imageViewer" onclick="closeImageViewer()">
+            <img src="#" alt="" class="imageViewer-image">
+        </div>
+
+        <div class="footer">
+            <span>Leonardo Museum Website</span>
+        </div>
+
+    </main>
+<script src="../src/js/script.js"></script>
+</body>
+</html>
