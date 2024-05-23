@@ -44,13 +44,10 @@ h3 {
 }
 
 .header {
-    position: centre;
     top: 0;
     padding: 3rem 2rem; 
     background: rgb(134, 135, 119);
-    backdrop-filter: blur(10px);
     display: flex;
-    justify-content: space-between;
     align-items: center;
     z-index: 100;
 }
