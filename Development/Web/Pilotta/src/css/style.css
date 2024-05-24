@@ -155,3 +155,78 @@ footer {
 footer p {
     color: var(--text-color);
 }
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .navbar a {
+        margin: 1rem 0;
+    }
+
+    .photo-box {
+        flex-direction: column;
+    }
+
+    .photo-box img {
+        max-width: 90%;
+        margin-bottom: 1rem;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .box img {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .box .text {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header img {
+        margin-bottom: 1rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 1.4rem;
+    }
+
+    .navbar a {
+        font-size: 1.6rem;
+    }
+
+    .description {
+        font-size: 1.4rem;
+    }
+
+    .box p {
+        font-size: 1rem;
+    }
+
+    footer p {
+        font-size: 1.4rem;
+    }
+}
