@@ -157,8 +157,6 @@ footer p {
 }
 
 @media (max-width: 768px) {
-
-
     .navbar {
         flex-direction: column;
         padding: 1rem;
@@ -195,40 +193,5 @@ footer p {
 
     .box .text {
         max-width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    .header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .header img {
-        margin-bottom: 1rem;
-    }
-
-    h3 {
-        font-size: 1.2rem;
-    }
-
-    p {
-        font-size: 1.4rem;
-    }
-
-    .navbar a {
-        font-size: 1.6rem;
-    }
-
-    .description {
-        font-size: 1.4rem;
-    }
-
-    .box p {
-        font-size: 1rem;
-    }
-
-    footer p {
-        font-size: 1.4rem;
     }
 }
