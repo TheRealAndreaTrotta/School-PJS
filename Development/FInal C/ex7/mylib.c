@@ -5,11 +5,10 @@
 #define MIN 1
 #define MAX 9
 
-int input(char string[]) {
+int input(const char * format) {
     int value;
-
-    printf("%s", string);
-    scanf("%d", &value);
+    
+    printf("%s", format); scanf("%d", &value);
 
     return value;
 }
