@@ -1,57 +1,20 @@
-#countdown {
-    font-size: 4em;
-    color: red;
-    text-align: center;
-    margin-top: 2rem;
-}
-
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    scroll-behavior: smooth;
 }
 
 :root {
-    --bg-color: #111;
     --main-color: #dc143c;
 }
 
-html {
-    font-size: 62.5%;
-    overflow-x: hidden;
-}
-
 body {
-    background-color: var(--bg-color);
-    max-width: 120rem;
-    margin: 0 auto;
-    padding: 0 2rem;
-    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: rgb(7, 7, 20);
     flex-direction: column;
-}
-
-div {
-    margin-bottom: 100px; 
-}
-
-h1 {
-    font-size: 40px;
-    font-family: fantasy;
-}
-
-
-.counter {
-    text-align: center;
-    font-size: 5rem;
-    color: white;
 }
 
 .heart-container {
@@ -61,16 +24,13 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
 }
-
-
 
 .red-heart {
     background: var(--main-color);
     width: 100px;
     height: 100px;
-    position: relative;
+    position: absolute;
     transform: rotate(-45deg);
     animation: heartbeat 1s infinite;
 }

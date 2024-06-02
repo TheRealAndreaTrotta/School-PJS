@@ -18,8 +18,8 @@ function calculatePassedTime(startDate, endDate) {
     const monthsPassed = Math.floor(difference / millisecondsPerMonth);
 
     // Gestione della concordanza singolare/plurale per anni e mesi passati
-    let yearsText = yearsPassed === 1 ? " anno " : " anni ";
-    let monthsText = monthsPassed === 1 ? " mese " : " mesi ";
+    let yearsText = yearsPassed === 1 ? " anno" : " anni";
+    let monthsText = monthsPassed === 1 ? " mese" : " mesi";
 
     return { years: yearsPassed, months: monthsPassed, yearsText: yearsText, monthsText: monthsText };
 }
@@ -70,9 +70,13 @@ function startMonthlyCountdown() {
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        // Display the countdown
-        document.getElementById("countdown").innerHTML = days + " Giorni " + hours + " Ore "
-            + minutes + " Minuti " + seconds + " Secondi ";
+        // Gestione della concordanza singolare/plurale
+        let daysText = days === 1 ? " Giorno " : " Giorni ";
+        let hoursText = hours === 1 ? " Ora " : " Ore ";
+        let minutesText = minutes === 1 ? " Minuto " : " Minuti ";
+        let secondsText = seconds === 1 ? " Secondo " : " Secondi ";
+
+        document.getElementById("countdown").innerHTML = days + daysText + hours + hoursText + minutes + minutesText + seconds + secondsText;
 
         if (distance < 0) {
             clearInterval(x);
