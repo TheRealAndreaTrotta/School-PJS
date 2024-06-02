@@ -80,8 +80,30 @@ function startMonthlyCountdown() {
 
         if (distance < 0) {
             clearInterval(x);
-            document.getElementById("countdown").innerHTML = "I FREAKING LOVE YOU DARLING!";
-            startMonthlyCountdown(); // Restart the countdown for the next month
+            const loveMessages = [
+                "I FREAKING LOVE YOU DARLING!",
+                "YOU MEAN EVERYTHING TO ME!",
+                "YOU ARE MY SUNSHINE!",
+                "YOU MAKE MY WORLD BRIGHTER!",
+                "YOU ARE MY ROCK!",
+                "I AM SO LUCKY TO HAVE YOU!",
+                "MY LOVE FOR YOU IS ENDLESS!",
+                "YOU COMPLETE ME!",
+                "YOU ARE MY EVERYTHING!",
+                "YOU ARE THE BEST THING IN MY LIFE!",
+                "YOU LIGHT UP MY LIFE!",
+                "I LOVE YOU MORE THAN WORDS CAN EXPRESS!"
+            ];
+
+            const currentMonth = new Date().getMonth();
+            const selectedMessage = loveMessages[currentMonth % loveMessages.length];
+
+            document.getElementById("countdown").innerHTML = selectedMessage;
+
+            // Ripristina il countdown mensile dopo 24 ore
+            setTimeout(function() {
+                startMonthlyCountdown(); // Restart the countdown for the next month
+            }, 24 * 60 * 60 * 1000); // 24 ore in millisecondi
         }
     }, 1000);
 }
