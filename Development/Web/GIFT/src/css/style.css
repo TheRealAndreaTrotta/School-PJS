@@ -1,0 +1,40 @@
+#countdown {
+    font-family: fantasy;
+    font-size: 4em;
+    color: red;
+    text-align: center;
+    margin-top: 40rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #111;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--bg-color);
+    max-width: 120rem; 
+    margin: 0 auto; 
+    padding: 0 2rem;
+    color: white;
+}
+
+.counter {
+    text-align: center;
+    font-size: 5rem;
+    color: black;
+}

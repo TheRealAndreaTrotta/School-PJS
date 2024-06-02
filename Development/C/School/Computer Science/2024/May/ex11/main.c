@@ -3,8 +3,8 @@
 int main(void) {
     srand(time(NULL));
 
-    int rows = input("Please, enter the rows value: ") + 1;
-    int cols = input("Please, enter the colums value: " + 1);
+    int rows = input("Please, enter the rows value: ");
+    int cols = input("Please, enter the colums value: ");
 
     int matrix[rows][cols];
 
